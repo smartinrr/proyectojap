@@ -23,10 +23,10 @@ function validateProfile() {
     const name = document.getElementById("name").value;
     const lastName = document.getElementById("lastName").value;
     const email = document.getElementById("email").value;
-    const phone = document.getElementById("phone").value;
+    
 
     // Validar que los campos obligatorios estén llenos
-    if (name.trim() === "" || lastName.trim() === "" || email.trim() === "" || phone.trim() === "") {
+    if (name.trim() === "" || lastName.trim() === "" || email.trim() === "" ) {
         alert("Por favor, complete todos los campos obligatorios.");
         return;
     }
@@ -38,7 +38,7 @@ function validateProfile() {
         lastName,
         secondLastName: document.getElementById("secondLastName").value, // Este campo no es obligatorio
         email,
-        phone
+        phone: document.getElementById("phone").value, // Este campo no es obligatorio
     };
 
     // Guardar el perfil del usuario
@@ -49,5 +49,8 @@ function validateProfile() {
 
     alert("Perfil guardado exitosamente.");
 }
+
+
+
 
 
